@@ -1,0 +1,230 @@
+:root {
+    --color_white: white;
+    --color_light_yellow:#f79d33;
+    --color_blue:#fff;
+}
+.kitten_card {
+    width: 260px;
+    height: 300px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+
+.kitten_img {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    margin: 0 auto;
+}
+
+.information_card {
+    margin-bottom: 15px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 260px;
+    border-radius: 20px;
+    background-color: var(--color_light_yellow);
+}
+
+.price {
+    position: absolute;
+    top: 15px;
+    background-color: var(--color_white);
+    border-radius: 10px;
+
+}
+
+.text_price {
+    padding: 10px 30px;
+}
+
+.kitten_information {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 15px;
+}
+.kitten_information :last-child {
+	font-variant: small-caps;
+}
+
+.kitten_information_category {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 15px;
+}
+
+.line {
+    border-bottom: 2px solid var(--color_blue);
+}
+
+.footer_cat {
+    display: flex;
+    width: 80%;
+    align-items: normal;
+    flex-direction: column;
+}
+
+.CatsCard {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 5vh;
+}
+
+
+.navBar {
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem 3.2rem;
+	align-items: center;
+}
+.navBarRightItems {
+	display: flex;
+	align-items: center;
+}
+.navBarRightItems a{
+	text-decoration: none;
+    color: black;
+}
+	
+.second_link {
+	padding-left: 15px;
+}
+
+/* Dropdown */
+.dd-menu {
+  	display: none;
+}
+.dropdown + .dropdown {
+ 	margin-left: 10px;
+}
+.visible {
+  	display: block;
+}
+.dropdown {
+  	display: inline-block;
+  	position: relative;
+}
+
+.dd-button {
+	display: inline-block;
+	border-radius: 4px;
+	padding: 3px 30px 3px 3px;
+	background-color: #ffffff;
+	cursor: pointer;
+	white-space: nowrap;
+}
+.dd-button svg{
+margin-right: 0.5rem;
+}
+
+.dd-button:after {
+  	content: '';
+  	position: absolute;
+  	top: 50%;
+  	right: 15px;
+  	transform: translateY(-50%);
+  	width: 0; 
+  	height: 0; 
+  	border-left: 5px solid transparent;
+  	border-right: 5px solid transparent;
+  	border-top: 5px solid black;
+}
+
+.dd-button:hover {
+  	background-color: #eeeeee;
+}
+
+.dd-input {
+  	display: none;
+}
+
+.dd-menu {
+  	position: absolute;
+  	top: 100%;
+  	border: 1px solid #ccc;
+  	border-radius: 4px;
+  	padding: 0;
+  	margin: 2px 0 0 0;
+  	box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+  	background-color: #ffffff;
+  	list-style-type: none;
+  	z-index: 7;
+}
+
+.dd-menu li {
+  	padding: 10px 20px;
+  	cursor: pointer;
+  	white-space: nowrap;
+}
+
+.dd-menu li:hover {
+  	background-color: #f6f6f6;
+}
+
+.dd-menu li a {
+  	display: block;
+  	margin: -10px -20px;
+  	padding: 10px 20px;
+}
+
+.dd-menu li.divider{
+  	padding: 0;
+  	border-bottom: 1px solid #cccccc;
+}
+.buttonStart{
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    height: 3rem;
+    font-size: 1.3rem;
+    background: #ef52d1;
+    border: 2px solid #c23da8;
+    color: #fff;
+    border-radius: .5rem;
+}
+.serchFilter{
+	display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+.SearchBar-action{
+	display: flex;
+    align-items: center;
+}
+.CheckboxDropdawn{
+	display: flex;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.buttonCartsCats{
+	display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+.SearchBar-container{
+	display: flex;
+	display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+.SearchBar-actionGroups{
+	display: flex;
+}
+.DropdawnRight{
+	display: flex;
+	align-items: center;
+}
+.DropdawnRight p{
+	color: #82817d;
+	padding-right: 10px;
+}
