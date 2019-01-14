@@ -4,8 +4,16 @@ document.querySelector('.CatsCard').insertAdjacentHTML("afterbegin", renderKitte
 });
 
 // Функции вывода карточек котиков(Форма)
+    var kitties = new XMLHttpRequest();
+    kitties.onload = reqListener;
+    kitties.open("get", "https://ma-cats-api.herokuapp.com/api/cats", true);
+    kitties.send();
+
 function renderKitten(kitten) {
-    return `
+    const infoOfCats = JSON.parse(kitties.responseText);
+	const cats = infoOfCats.cats.slice(0, 12);
+	const listOfCats = cats.map((cat) => {
+		return `
     <div class="information_card">
         <div class="kitten_card" style="background-color: ${getRandomColor()}">
           <div class="price">
