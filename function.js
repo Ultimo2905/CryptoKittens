@@ -10,9 +10,9 @@ document.querySelector('.CatsCard').insertAdjacentHTML("afterbegin", renderKitte
     kitties.send();
 
 function renderKitten(kitten) {
-    const infoOfCats = JSON.parse(kitties.responseText);
-	const cats = infoOfCats.cats.slice(0, 12);
-	const listOfCats = cats.map((cat) => {
+//     const infoOfCats = JSON.parse(kitties.responseText);
+// 	const cats = infoOfCats.cats.slice(0, 12);
+// 	const listOfCats = cats.map((cat) => {
 		return `
     <div class="information_card">
         <div class="kitten_card" style="background-color: ${getRandomColor()}">
@@ -35,6 +35,7 @@ function renderKitten(kitten) {
     </div>
 `;
 }
+// }
 // Функции вывода карточек котиков(Вывод из бд)
 function renderKittens(cats) {
     return cats.map(cat => renderKitten(cat))
