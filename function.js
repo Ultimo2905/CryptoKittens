@@ -41,6 +41,8 @@ function getRandomColor() {
     }
     return color;
 }
+let loader= document.getElementById('loader');
+loader.classList.add('loader_opened');
 
 // Dropdown 
 document.addEventListener('click', (event) => {
