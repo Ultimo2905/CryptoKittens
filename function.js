@@ -33,7 +33,7 @@ function renderKittens(cats) {
     return cats.map(cat => renderKitten(cat))
         .join('');}
 
-fetch('https://ma-cats-api.herokuapp.com/api/cats?&per_page=12')
+fetch('https://ma-cats-api.herokuapp.com/api/cats?per_page=12')
     .then(
         function(response) {
             response.json().then(function(cats) {
