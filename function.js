@@ -9,7 +9,7 @@ document.querySelector('.CatsCard').insertAdjacentHTML("afterbegin", renderKitte
     kitties.open("get", "https://ma-cats-api.herokuapp.com/api/cats", true);
     kitties.send();
 
-function renderKitten(kitten) {
+function renderKitten(cat) {
 //     const infoOfCats = JSON.parse(kitties.responseText);
 // 	const cats = infoOfCats.cats.slice(0, 12);
 // 	const listOfCats = cats.map((cat) => {
@@ -17,19 +17,19 @@ function renderKitten(kitten) {
     <div class="information_card">
         <div class="kitten_card" style="background-color: ${getRandomColor()}">
           <div class="price">
-            <span class="text_price">Price: ${kitten.price + '  ua'}</span>
+            <span class="text_price">Price: ${cat.price + '  ua'}</span>
           </div>
-            <img src="${kitten.img_url}"class="kitten_img">
+            <img src="${cat.img_url}"class="kitten_img">
         </div>
         <div class="footer_cat">
               <div class="kitten_information">
-                  <span>${kitten.id}</span>
-                  <span>${kitten.name}</span>
+                  <span>${cat.id}</span>
+                  <span>${cat.name}</span>
               </div>
               <div class="line">
               </div>
              <div class="kitten_information_category">
-               <span>${kitten.category}</span> 
+               <span>${cat.category}</span> 
              </div>
         </div>
     </div>
@@ -40,6 +40,21 @@ function renderKitten(kitten) {
 function renderKittens(cats) {
     return cats.map(cat => renderKitten(cat))
         .join('');}
+
+fetch('https://ma-cats-api.herokuapp.com/api/cats?&per_page=12')
+    .then(
+        function(response) {
+            response.json().then(function(cats) {
+                setTimeout(function () {
+                    document.querySelector('.CatsCard').insertAdjacentHTML("afterbegin", renderKittens(cats.cats));
+                    loader.classList.remove('loader_opened');
+                }, 2000);
+
+            });
+        }
+    );
+
+
 
 // Функция для рандомного цвета фона в табличках котиков
 function getRandomColor() {
