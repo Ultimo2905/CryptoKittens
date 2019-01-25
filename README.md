@@ -1,5 +1,5 @@
-# CatsMag
-CatsMag
+# CryptoKittens
 
-[Link](https://ultimo2905.github.io/CryptoKittens/)
+
+[Link for CryptoKittens](https://ultimo2905.github.io/CryptoKittens/)
 
