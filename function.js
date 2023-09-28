@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
 document.querySelector('.CatsCard').insertAdjacentHTML("afterbegin", renderKittens(cats));
 });
